@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url:  jdbc:h2:tcp://localhost/~/jwtdemo
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        default_batch_fetch_size: 100
+logging:
+  level:
+    org.hibernate.SQL: debug;
+    org.hibernate.orm.jdbc.bind: trace
+
+jwt:
+  secret:
+    key: 1e0e351c553e0b61c0d004d620d5e5cf59144dd0518d0c09a6644e1e188f2979
